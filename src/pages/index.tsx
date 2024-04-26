@@ -11,7 +11,7 @@ import SectionGridFeatureProperty from "@/components/SectionGridFeatureProperty"
 import SectionDowloadApp from "@/components/SectionDowloadApp";
 import SectionHero2 from "@/components/SectionHero2";
 import { useSession } from "next-auth/react";
-import { fetchUserProperties, fetchUsers } from "@/features/user/userApi";
+import { fetchUserProperties } from "@/features/user/userApi";
 import { useMutation } from "@apollo/react-hooks";
 import { UPDATE_USER_MUTATION } from "@/graphql/mutation";
 import { setCurrentUser } from "@/features/user/userSlice";
@@ -78,9 +78,9 @@ function PageHome2() {
     dispatch(fetchProperties());
   }, [dispatch]);
 
-  useEffect(() => {
-    dispatch(fetchUsers());
-  }, [dispatch]);
+//  useEffect(() => {
+   // dispatch(fetchUsers());
+//  }, [dispatch]);
 
 
   useEffect(() => {
